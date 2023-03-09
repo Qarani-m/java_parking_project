@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="333.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="email" layoutX="156.0" layoutY="24.0" prefHeight="48.0" prefWidth="288.0" promptText="Email" style="-fx-border-color: #dc143c;" />
+            <TextField fx:id="phone" layoutX="156.0" layoutY="103.0" prefHeight="48.0" prefWidth="288.0" promptText="Phone Number" style="-fx-border-color: #dc143c;" />
+            <Button fx:id="signup_btn" layoutX="220.0" layoutY="339.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" style="-fx-background-color: #dc143c;" text="Signup" />
+            <Label fx:id="login" layoutX="195.0" layoutY="415.0" prefHeight="18.0" prefWidth="211.0" text="Already have an account? Login" />
+            <TextField fx:id="password" layoutX="156.0" layoutY="182.0" prefHeight="48.0" prefWidth="288.0" promptText="Password" style="-fx-border-color: #dc143c;" />
+            <TextField fx:id="confirm_password" layoutX="156.0" layoutY="260.0" prefHeight="48.0" prefWidth="288.0" promptText="Confirm Password" style="-fx-border-color: #dc143c;" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="85.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="250.0" layoutY="26.0" text="Login">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

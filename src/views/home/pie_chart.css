@@ -1,0 +1,12 @@
+.chart-pie {
+    -fx-pie-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.chart-pie-label {
+    -fx-background-color: transparent;
+}
+
+.chart-pie:hover {
+    -fx-border-width: 0;
+}

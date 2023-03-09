@@ -1,0 +1,22 @@
+#bar_chart{
+	-fx-background-color: transparent;
+	-fx-bar-fill: transparent;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: transparent;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #dc143c;
+}
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+.default-color0.chart-bar {
+    -fx-background-radius: 5px;
+}
