@@ -20,7 +20,8 @@ public class Login {
         String password_text = password.getText();
         System.out.println("s");
         String selectQuery = "SELECT password FROM users WHERE username='"+email_text+"' OR email='"+email_text+"';";
-        String pass = db_config.executeQuery(selectQuery);
+        String pass = (String) db_config.executeQuery(selectQuery);
+        System.out.println(pass);
         if(pass==null){
             error.setText("Invalid email / password");
         }else{
