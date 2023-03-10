@@ -89,49 +89,9 @@ public static ObservableList<Vehicle> table_data(ResultSet rs) throws SQLExcepti
         Vehicle vehicle = new Vehicle(date, plate_number, slot_number, entry_time, departure_time, payment_id, charge);
         vehicleList.add(vehicle);
     }
-
-
-    System.out.println("j");
     return vehicleList;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-//
-//
-//        date = rs.getString("date_");
-//                int charge = rs.getInt("charge ");
-//
-//                String plate_number = rs.getString("plate_number");
-//                String slot_number = rs.getString("slot_number");
-////        String entry_time = rs.getString("entry_time ");
-////        String departure_time = rs.getString("departure_time");
-//                String payment_id = rs.getString("payment_id ");
-//
 
 

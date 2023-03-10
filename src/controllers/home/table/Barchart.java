@@ -1,5 +1,6 @@
 package controllers.home.table;
 
+import com.sun.javafx.charts.Legend;
 import javafx.scene.Node;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
@@ -43,7 +44,6 @@ public class Barchart {
         Node node2 = ((XYChart.Data<String, Number>) series1.getData().get(2)).getNode();
         node2.setStyle("-fx-bar-fill: " + c + ";");
         node2.setStyle("-fx-bar-fill: " + c + ";");
-
         Node series2_node = ((XYChart.Data<String, Number>) series2.getData().get(0)).getNode();
         String series2_color  = colors.get(1);
         series2_node.setStyle("-fx-bar-fill: " + series2_color + ";");

@@ -5,23 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8af9d926-2bcb-43bd-95c7-b96399ae1730" name="Changes" comment="s">
-      <change afterPath="$PROJECT_DIR$/src/controllers/home/table/Barchart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/home/table/Table.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/home/table/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/home/table/Piechart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/home/table/Statistics.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../Node.js/xem-web" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/parking_project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parking_project/controllers/auth/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/controllers/auth/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parking_project/controllers/auth/Signup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/controllers/auth/Signup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/parking_project/utils/db_config.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/utils/db_config.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/parking_project/views/home/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/views/home/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parking_project/views/home/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parking_project/views/home/pie_chart.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/views/home/pie_chart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/auth/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Barchart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/table/Barchart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/table/Table.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/db_config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db_config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/home/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/signup.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/pie_chart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/pie_chart.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
