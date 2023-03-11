@@ -1,37 +1,27 @@
 package controllers.home.table;
 
-import javafx.application.Platform;
 import javafx.collections.ObservableList;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.PieChart;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.animation.Timeline;
+import javafx.animation.KeyFrame;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
+import javafx.util.Duration;
 import utils.db_config;
-import javafx.collections.FXCollections;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
-
-public class Table implements Initializable {
+public class Table extends Thread implements Initializable{
+    private Timeline timeline;
 
     @FXML
     private TableView<Vehicle> table;
@@ -53,27 +43,35 @@ public class Table implements Initializable {
     private PieChart pie_chart;
     @FXML
     private BarChart<?, ?> bar_chart;
+    @FXML
+    private Label reserved_space;
+    @FXML
+    private Label free_space;
+    @FXML
+    private Label percent_occupancy;
+    @FXML
+    private Label occupied;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         db_config db = new db_config();
-        tebles_setup(db);
-
+        tables_setup(db);
         new Barchart(bar_chart);
         new Piechart(pie_chart);
+        Statistics st =new Statistics();
+        st.start();
+        timeline = new Timeline(new KeyFrame(Duration.seconds(3), event -> {
+            reserved_space.setText(String.valueOf(st.reservation_count));
+            free_space.setText(String.valueOf(st.free_space));
+            percent_occupancy.setText(String.valueOf(st.percent_occupancy));
+            occupied.setText(String.valueOf(st.capacity));
 
-
-
-
-
-
-
-
-
-
+        }));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
     }
 
-    private void tebles_setup(db_config db) {
+    private void tables_setup(db_config db) {
         date_column.setCellValueFactory(new PropertyValueFactory<Vehicle, String>("date_column"));
         plates_column.setCellValueFactory(new PropertyValueFactory<Vehicle, String>("plates_column"));
         slotnumber_column.setCellValueFactory(new PropertyValueFactory<Vehicle, String>("slotnumber_column"));

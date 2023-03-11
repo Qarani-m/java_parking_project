@@ -8,7 +8,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class db_config {
-    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/parking_project";
+    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/parking_project?useSSL=false"   ;
     private static final String DATABASE_USERNAME = "root";
     public static ArrayList<String[]> list = new ArrayList<>();
     private static final String DATABASE_PASSWORD = "";
@@ -28,7 +28,9 @@ public class db_config {
                 resultSet = statement.executeQuery(query);
                 if(query.contains("SELECT password FROM users")) {
                         return login(resultSet);
-                } else if(query.contains("select * from lot")) {
+                } else if(query.contains("select count(id) from")) {
+                    return reservation_count(resultSet);
+                }else if(query.contains("select * from lot")) {
                     return table_data(resultSet);
                 }
                 else{
@@ -56,27 +58,32 @@ public class db_config {
                     System.out.println("Failed to close statement: " + e);
                 }
             }
+            try {
+                connection.close();
+            }catch(Exception e){
+                System.out.println(e);
+            }
         }
         return null;
     }
 
-    public static Object table_proxy() {
-        System.out.println(list);;
-        return list;
+    private static Object reservation_count(ResultSet resultSet) throws SQLException {
+        String count = null;
+        while (resultSet.next()) {
+            count = resultSet.getString("count(id)");
+        }
+        return count;
     }
 
     public static String login(ResultSet rs) throws SQLException {
     String password="";
-    while (rs.next()) {
-        password = rs.getString("password");
-    }
+    while (rs.next()) {password = rs.getString("password");}
     return password;
 }
 
 
 
 public static ObservableList<Vehicle> table_data(ResultSet rs) throws SQLException {
-
     ObservableList<Vehicle> vehicleList = FXCollections.observableArrayList();
     while (rs.next()) {
         String date = rs.getString("date_");
@@ -88,9 +95,42 @@ public static ObservableList<Vehicle> table_data(ResultSet rs) throws SQLExcepti
         String charge = rs.getString("charge");
         Vehicle vehicle = new Vehicle(date, plate_number, slot_number, entry_time, departure_time, payment_id, charge);
         vehicleList.add(vehicle);
-    }
-    return vehicleList;
+    } return vehicleList;
 }
+//free space and reserved
+    public void stats_free_and_reserved(){
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 

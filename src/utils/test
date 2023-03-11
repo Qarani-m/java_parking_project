@@ -1,0 +1,7 @@
+   timeline = new Timeline(new KeyFrame(Duration.seconds(3), event -> {
+            // Update the label's text every 3 seconds
+            fs_stats.setText(String.valueOf(finalJ));
+
+        }));
+        timeline.setCycleCount(Timeline.INDEFINITE); // repeat indefinitely
+        timeline.play();

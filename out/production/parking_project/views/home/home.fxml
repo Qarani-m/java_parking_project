@@ -67,13 +67,20 @@
                            </font>
                         </Label>
                         <PieChart fx:id="pie_chart" layoutX="29.0" layoutY="61.0" prefHeight="326.0" prefWidth="441.0" style="lab: 30px;" stylesheets="@pie_chart.css" />
-                        <Label layoutX="489.0" layoutY="90.0" prefHeight="16.0" prefWidth="107.0" text="Free Space" textFill="#fefefe" />
-                        <Label layoutX="489.0" layoutY="124.0" prefHeight="30.0" prefWidth="127.0" text="Reserved Spaces" textFill="#fefefe" />
-                        <Label layoutX="489.0" layoutY="166.0" prefHeight="30.0" prefWidth="127.0" text="Percent Occupacy" textFill="#fefefe" />
-                        <Label layoutX="489.0" layoutY="201.0" prefHeight="30.0" prefWidth="127.0" text="Todays Revenue" textFill="#fefefe" />
-                        <Label layoutX="489.0" layoutY="242.0" prefHeight="30.0" prefWidth="127.0" text="Filled Floor" textFill="#fefefe" />
-                        <Label layoutX="489.0" layoutY="282.0" prefHeight="30.0" prefWidth="127.0" text="Avarage Stay-time" textFill="#fefefe" />
-                        <Label layoutX="489.0" layoutY="328.0" prefHeight="30.0" prefWidth="127.0" text="Capacity" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="61.0" prefHeight="16.0" prefWidth="107.0" text="Free Space" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="123.0" prefHeight="30.0" prefWidth="127.0" text="Reserved Spaces" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="160.0" prefHeight="30.0" prefWidth="127.0" text="Percent Occupacy" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="201.0" prefHeight="30.0" prefWidth="127.0" text="Todays Revenue" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="241.0" prefHeight="30.0" prefWidth="127.0" text="Filled Floor" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="282.0" prefHeight="30.0" prefWidth="127.0" text="Avarage Stay-time" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="85.0" prefHeight="30.0" prefWidth="127.0" text="Occupied" textFill="#fefefe" />
+                        <Label fx:id="free_space" layoutX="623.0" layoutY="69.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label fx:id="reserved_space" layoutX="623.0" layoutY="130.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label fx:id="percent_occupancy" layoutX="623.0" layoutY="167.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label layoutX="623.0" layoutY="208.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label layoutX="623.0" layoutY="248.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label layoutX="623.0" layoutY="289.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label fx:id="occupied" layoutX="623.0" layoutY="100.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="402.0" prefWidth="930.0" style="-fx-background-radius: 30px; -fx-background-color: #444444;" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
@@ -124,7 +131,7 @@
                   </TextField>
                </children>
             </AnchorPane>
-            <TableView fx:id="table" layoutX="181.0" layoutY="74.0" prefHeight="40.0" prefWidth="1516.0" style="-fx-background-radius: 30px; -fx-background-insets: 0,0010; -fx-background-color: c;" stylesheets="@table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
+            <TableView fx:id="table" layoutX="181.0" layoutY="74.0" prefHeight="40.0" prefWidth="1516.0" style="-fx-background-radius: 30px; -fx-background-insets: 0,0010; -fx-background-color: #2b2b2b;" stylesheets="@table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
               <columns>
                   <TableColumn fx:id="date_column" prefWidth="500.0" text="DATE" />
                   <TableColumn fx:id="plates_column" prefWidth="124.8" text="PLATE NUMBER" />

@@ -17,3 +17,10 @@ CREATE TABLE lot (
     charge varchar(255),
     payment_id varchar(255) default ''
 );
+create table reservations(
+    id int(10) auto_increment primary key,
+    slot_number varchar(255) not null,
+    floor varchar(255) not null,
+    reservation_id varchar(255) not null,
+    reserve_time varchar(255) not null,
+)
