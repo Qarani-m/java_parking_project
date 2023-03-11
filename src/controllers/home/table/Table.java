@@ -51,6 +51,12 @@ public class Table extends Thread implements Initializable{
     private Label percent_occupancy;
     @FXML
     private Label occupied;
+    @FXML
+    private Label filled_floors;
+    @FXML
+    private Label avg_time;
+    @FXML
+    private Label revenue;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -65,7 +71,10 @@ public class Table extends Thread implements Initializable{
             free_space.setText(String.valueOf(st.free_space));
             percent_occupancy.setText(String.valueOf(st.percent_occupancy));
             occupied.setText(String.valueOf(st.capacity));
-
+            filled_floors.setText(String.valueOf(st.filled_floors));
+            avg_time.setText(String.valueOf(st.avg_time));
+//            revenue.setText(String.valueOf(st.avg_time));
+            revenue.setText("21,342");
         }));
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();

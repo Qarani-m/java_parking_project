@@ -32,6 +32,8 @@ public class db_config {
                     return reservation_count(resultSet);
                 }else if(query.contains("select * from lot")) {
                     return table_data(resultSet);
+                }else if(query.contains("SELECT avg_time FROM (SELECT SEC_TO_TIME((AVG(TIME_TO_SEC(departure_time)) - AVG(TIME_TO_SEC(entry_time)))/ 2) AS avg_time FROM lot) AS subquery;")) {
+                    return avg_time(resultSet);
                 }
                 else{
                     return null;
@@ -67,6 +69,13 @@ public class db_config {
         return null;
     }
 
+    private static Object avg_time(ResultSet resultSet) throws SQLException {
+        String avg_time  = null;
+                while (resultSet.next()) {
+                    avg_time  = resultSet.getString("avg_time");
+        }
+        return avg_time;
+    }
     private static Object reservation_count(ResultSet resultSet) throws SQLException {
         String count = null;
         while (resultSet.next()) {
@@ -74,7 +83,6 @@ public class db_config {
         }
         return count;
     }
-
     public static String login(ResultSet rs) throws SQLException {
     String password="";
     while (rs.next()) {password = rs.getString("password");}
@@ -98,9 +106,13 @@ public static ObservableList<Vehicle> table_data(ResultSet rs) throws SQLExcepti
     } return vehicleList;
 }
 //free space and reserved
-    public void stats_free_and_reserved(){
-
-    }
+//    public void avg_time()throws SQLException {
+//        while (rs.next()) {
+//
+//        }
+//
+//
+//    }
 
 
 

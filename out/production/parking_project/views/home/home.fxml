@@ -77,9 +77,9 @@
                         <Label fx:id="free_space" layoutX="623.0" layoutY="69.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
                         <Label fx:id="reserved_space" layoutX="623.0" layoutY="130.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
                         <Label fx:id="percent_occupancy" layoutX="623.0" layoutY="167.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
-                        <Label layoutX="623.0" layoutY="208.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
-                        <Label layoutX="623.0" layoutY="248.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
-                        <Label layoutX="623.0" layoutY="289.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label fx:id="revenue" layoutX="623.0" layoutY="208.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label fx:id="filled_floors" layoutX="623.0" layoutY="248.0" prefHeight="16.0" prefWidth="107.0" text="0 of 4" textFill="#fefefe" />
+                        <Label fx:id="avg_time" layoutX="623.0" layoutY="289.0" prefHeight="16.0" prefWidth="107.0" text="3.63 hrs" textFill="#fefefe" />
                         <Label fx:id="occupied" layoutX="623.0" layoutY="100.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
                      </children>
                   </AnchorPane>
