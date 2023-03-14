@@ -1,14 +1,7 @@
 package controllers.home.table;
 
-import com.sun.javafx.charts.Legend;
-import javafx.collections.ObservableList;
-import javafx.scene.Node;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
-import com.sun.javafx.charts.Legend;
 import utils.db_config;
 
 import java.util.Arrays;
@@ -32,12 +25,12 @@ public class Barchart {
         String[] sizes={"S", "M","L"};
         String[] months={};
 
-        for(int i=0;i<3;i++){
-//            for(int j=0;j<3;j++) {
-                for (int k = 0; k < 3; k++) {
-                    System.out.println("select coun(*) from lot where size_='"+sizes[i]+"' and date_ between '"+dates[]);
-                }
-//            }
+        for (int i = 0; i < sizes.length; i++) {
+            for (int j = 0; j < dates.length; j++) {
+                String q ="select count(*) from lot where size_ = '"+sizes[i]+"' and date_ between'"+dates[j][0]+"' and '"+dates[j][1]+ "'";
+                Object target=  db_config.executeQuery(q);
+                System.out.println(target+"-----"+q);
+            }
         }
 
 

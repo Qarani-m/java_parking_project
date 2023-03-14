@@ -15,7 +15,6 @@ public class db_config {
     public static ArrayList<String[]> list = new ArrayList<>();
     private static final String DATABASE_PASSWORD = "";
 
-
     public static Object executeQuery(String query) {
         Connection connection = null;
         Statement statement = null;
@@ -36,6 +35,8 @@ public class db_config {
                     return turnover(resultSet);
                 }else if(query.contains("SELECT * FROM lot WHERE date_ = CURDATE();")) {
                     return todays_income(resultSet);
+                }else if(query.contains("select count(*) from lot where size_")) {
+                    barchart(resultSet);
                 }else if(query.contains("select * from lot") || query.contains("select * from reservations")) {
                     return table_data(resultSet);
                 } if(query.contains("SELECT SEC_TO_TIME((AVG(TIME_TO_SEC(entry_time)) + AVG(TIME_TO_SEC(departure_time))) / 2) AS avg_time")) {
@@ -50,7 +51,7 @@ public class db_config {
                 return "stuff";
             }
         } catch (SQLException ex) {
-            System.out.println("Exception: " + ex.getMessage());
+            System.out.println("Exception---: " + ex.getMessage());
         } finally {
             if (resultSet != null) {
                 try {
@@ -69,10 +70,21 @@ public class db_config {
             try {
                 connection.close();
             }catch(Exception e){
-                System.out.println(e);
+                System.out.println("-----"+e);
             }
         }
         return null;
+    }
+
+    private static String barchart(ResultSet resultSet) throws SQLException {
+        int count = 0;
+        while (resultSet.next()) {
+            count = resultSet.getInt("count(*)");
+//            System.out.println(count);
+
+        }
+        System.out.println(count);
+        return "count";
     }
 
     private static float turnover(ResultSet resultSet) throws SQLException {

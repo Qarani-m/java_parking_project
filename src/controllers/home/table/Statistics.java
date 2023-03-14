@@ -36,7 +36,7 @@ public class Statistics extends Thread {
         weekly_income = (String) db_config.executeQuery("SELECT charge FROM lot WHERE date_ BETWEEN DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND CURDATE()");
         todays_income = (String) db_config.executeQuery("SELECT * FROM lot WHERE date_ = CURDATE();");
          turnover_rate = String.valueOf(( (float) db_config.executeQuery("SELECT count(*) FROM lot WHERE date_ = CURDATE();")/parseFloat(capacity))*100);
-        System.out.println(turnover_rate);
+
 
 //      turnover_rate = String.valueOf(turnover_rate1-turnover_rate2)
 
