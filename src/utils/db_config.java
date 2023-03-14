@@ -7,6 +7,8 @@ import javafx.collections.ObservableList;
 import java.sql.*;
 import java.util.ArrayList;
 
+import static java.lang.Integer.parseInt;
+
 public class db_config {
     private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/parking_project?useSSL=false"   ;
     private static final String DATABASE_USERNAME = "root";
@@ -14,12 +16,10 @@ public class db_config {
     private static final String DATABASE_PASSWORD = "";
 
 
-
     public static Object executeQuery(String query) {
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
-        String password = null;
 
         try {
             connection = DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
@@ -30,9 +30,15 @@ public class db_config {
                         return login(resultSet);
                 } else if(query.contains("select count(id) from")) {
                     return reservation_count(resultSet);
-                }else if(query.contains("select * from lot")) {
+                }else if(query.contains("SELECT charge FROM lot WHERE date_ BETWEEN DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND CURDATE()")) {
+                    return weekly(resultSet);
+                }else if(query.contains("SELECT count(*) FROM lot WHERE date_ = CURDATE();")) {
+                    return turnover(resultSet);
+                }else if(query.contains("SELECT * FROM lot WHERE date_ = CURDATE();")) {
+                    return todays_income(resultSet);
+                }else if(query.contains("select * from lot") || query.contains("select * from reservations")) {
                     return table_data(resultSet);
-                }else if(query.contains("SELECT avg_time FROM (SELECT SEC_TO_TIME((AVG(TIME_TO_SEC(departure_time)) - AVG(TIME_TO_SEC(entry_time)))/ 2) AS avg_time FROM lot) AS subquery;")) {
+                } if(query.contains("SELECT SEC_TO_TIME((AVG(TIME_TO_SEC(entry_time)) + AVG(TIME_TO_SEC(departure_time))) / 2) AS avg_time")) {
                     return avg_time(resultSet);
                 }
                 else{
@@ -67,6 +73,39 @@ public class db_config {
             }
         }
         return null;
+    }
+
+    private static float turnover(ResultSet resultSet) throws SQLException {
+         int count1 = 0;
+        while(resultSet.next()){
+             count1 =resultSet.getInt("count(*)");
+        }
+        return count1;
+    }
+
+    private static Object weekly(ResultSet resultSet) throws SQLException {
+        int weekly_sum = 0;
+        ArrayList<Integer> weekly_values = new ArrayList<Integer>();
+        while(resultSet.next()){
+            weekly_values.add(parseInt(resultSet.getString("charge")));
+        }
+        for (int i = 0; i < weekly_values.size(); i++) {
+            weekly_sum += weekly_values.get(i);
+        }
+
+        return String.valueOf(weekly_sum);
+    }
+
+    private static String todays_income(ResultSet resultSet) throws SQLException {
+        int todays_sum = 0;
+        ArrayList<Integer> todays_vals = new ArrayList<Integer>();
+        while(resultSet.next()){
+            todays_vals.add(parseInt(resultSet.getString("charge")));
+        }
+        for (int i = 0; i < todays_vals.size(); i++) {
+            todays_sum += todays_vals.get(i);
+        }
+        return String.valueOf(todays_sum);
     }
 
     private static Object avg_time(ResultSet resultSet) throws SQLException {
@@ -105,14 +144,9 @@ public static ObservableList<Vehicle> table_data(ResultSet rs) throws SQLExcepti
         vehicleList.add(vehicle);
     } return vehicleList;
 }
-//free space and reserved
-//    public void avg_time()throws SQLException {
-//        while (rs.next()) {
-//
-//        }
-//
-//
-//    }
+
+
+
 
 
 

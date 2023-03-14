@@ -13,3 +13,9 @@
     -fx-text-fill: white;
     -fx-font-weight: bold;
 }
+#searchbar .text {
+}
+.chart-legend-background{
+    -fx-text-fill: blue;
+
+}

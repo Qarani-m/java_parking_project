@@ -1,16 +1,16 @@
 package controllers.home.table;
 
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.PieChart;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.animation.Timeline;
 import javafx.animation.KeyFrame;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.util.Duration;
 import utils.db_config;
 
@@ -22,6 +22,7 @@ import java.util.TimerTask;
 
 public class Table extends Thread implements Initializable{
     private Timeline timeline;
+    private Timeline timeline2;
 
     @FXML
     private TableView<Vehicle> table;
@@ -39,8 +40,7 @@ public class Table extends Thread implements Initializable{
     private TableColumn<Vehicle, String> charge_column;
     @FXML
     private TableColumn<Vehicle, String> paymentid_column;
-    @FXML
-    private PieChart pie_chart;
+
     @FXML
     private BarChart<?, ?> bar_chart;
     @FXML
@@ -56,29 +56,50 @@ public class Table extends Thread implements Initializable{
     @FXML
     private Label avg_time;
     @FXML
+    private Label weekly_income;
+    @FXML
     private Label revenue;
+    @FXML
+    private TextField searchbar;
+    @FXML
+    private Button booked_btn;
+    @FXML
+    private Button reservation_btn;
+    @FXML
+    private Label turnover;
+    String table_name = "lot";
+    String searchQuery = "select * from "+table_name+" ORDER BY id DESC;";
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        System.out.println(searchQuery);
+
         db_config db = new db_config();
         tables_setup(db);
         new Barchart(bar_chart);
-        new Piechart(pie_chart);
         Statistics st =new Statistics();
         st.start();
-        timeline = new Timeline(new KeyFrame(Duration.seconds(3), event -> {
+
+        timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             reserved_space.setText(String.valueOf(st.reservation_count));
             free_space.setText(String.valueOf(st.free_space));
             percent_occupancy.setText(String.valueOf(st.percent_occupancy));
             occupied.setText(String.valueOf(st.capacity));
             filled_floors.setText(String.valueOf(st.filled_floors));
             avg_time.setText(String.valueOf(st.avg_time));
-//            revenue.setText(String.valueOf(st.avg_time));
-            revenue.setText("21,342");
+            revenue.setText("$ "+st.todays_income);
+            weekly_income.setText("$ "+st.weekly_income);
+            turnover.setText(st.turnover_rate+" %");
+            table.getItems().clear();
+            String s = "select * from "+ table_name+" order by id desc";
+            if(searchbar.getText().length()==0){searchQuery =s; table.setItems((ObservableList<Vehicle>) db.executeQuery(searchQuery));}
+            else{table.setItems((ObservableList<Vehicle>) db.executeQuery(searchQuery));}
+            tables_setup(db);
         }));
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();
     }
+    public void search_db(KeyEvent keyEvent) {searchQuery="select * from lot where plate_number like '%"+searchbar.getText()+"%'";}
 
     private void tables_setup(db_config db) {
         date_column.setCellValueFactory(new PropertyValueFactory<Vehicle, String>("date_column"));
@@ -88,6 +109,19 @@ public class Table extends Thread implements Initializable{
         departuretime_column.setCellValueFactory(new PropertyValueFactory<Vehicle, String>("departuretime_column"));
         charge_column.setCellValueFactory(new PropertyValueFactory<Vehicle, String>("charge_column"));
         paymentid_column.setCellValueFactory(new PropertyValueFactory<Vehicle, String>("paymentid_column"));
-        table.setItems((ObservableList<Vehicle>) db.executeQuery("select * from lot"));
     }
+    public void booked_table(ActionEvent actionEvent) {
+        table_name = "lot";
+        booked_btn.setStyle("-fx-background-color: #dc143c;");
+        reservation_btn.setStyle("-fx-background-color: #2d2d2d;");
+
+
+    }
+    public void reservation_table(ActionEvent actionEvent) {
+        table_name = "reservations";
+        reservation_btn.setStyle("-fx-background-color: #dc143c;");
+        booked_btn.setStyle("-fx-background-color: #2d2d2d;");
+
+    }
+
 }

@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="parking_project:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8af9d926-2bcb-43bd-95c7-b96399ae1730" name="Changes" comment="s">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/parking_project_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/dummy_data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parking_project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parking_project/models/users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/models/users.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/parking_project/utils/db_config.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/utils/db_config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parking_project/views/home/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/views/home/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parking_project/views/home/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/views/home/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Barchart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/table/Barchart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Piechart.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/table/Statistics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/table/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Update_Table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/users.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/db_config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db_config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/table.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +61,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "last_opened_file_path": "/home/martin/Desktop/Java/parking_project",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
