@@ -14,9 +14,9 @@
          <children>
             <TextField fx:id="email" layoutX="156.0" layoutY="24.0" prefHeight="48.0" prefWidth="288.0" promptText="Email" style="-fx-border-color: #2e3333;" />
             <Button fx:id="login_btn" layoutX="220.0" layoutY="206.0" mnemonicParsing="false" onAction="#Login" prefHeight="50.0" prefWidth="160.0" style="-fx-background-color: #dc143c;" text="Login" textFill="SILVER" />
-            <Label fx:id="create_account" layoutX="193.0" layoutY="297.0" prefHeight="18.0" prefWidth="215.0" text="Dont have an account? Signup" />
             <PasswordField fx:id="password" layoutX="157.0" layoutY="104.0" prefHeight="47.0" prefWidth="286.0" promptText="Password" style="-fx-border-color: #2e3333;" />
             <Button fx:id="error" layoutX="156.0" layoutY="170.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="289.0" style="-fx-background-color: transparent;" textFill="#e41313" />
+            <Button layoutX="181.0" layoutY="281.0" mnemonicParsing="false" onAction="#loginCreate" prefHeight="24.0" prefWidth="253.0" style="-fx-background-color: transparent;" text="Dont have an account? Signup" />
          </children>
       </AnchorPane>
    </center>

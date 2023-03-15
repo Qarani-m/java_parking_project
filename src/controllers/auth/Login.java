@@ -5,8 +5,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import utils.DbConfig;
+import utils.LoginManager;
+import utils.Routes;
+
+import java.io.IOException;
+import java.util.prefs.Preferences;
 
 public class Login {
+    Routes route = new Routes();
+
     @FXML
     private Label create_account;
     @FXML
@@ -32,11 +39,18 @@ public class Login {
                 if(ENC==false){
                     error.setText("Invalid email / password");
                 }else{
+                   new LoginManager().login(email_text,pass);
+                    route.goTo("../views/auth/signup.fxml",null);
+
                     error.setText("valid email / password");
                 }
             }catch(Exception e){
                 System.out.println("eee;"+e);
             }
         }
+    }
+
+    public void loginCreate(ActionEvent actionEvent) throws IOException {
+        route.goTo("../views/auth/signup.fxml",actionEvent);
     }
 }
