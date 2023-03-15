@@ -3,12 +3,14 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 <GridPane hgap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2b2b2b;" vgap="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.home.VehicleClearance">
     <columnConstraints>
@@ -39,9 +41,9 @@
             <Button fx:id="slots_btn1" layoutX="86.0" layoutY="335.0" mnemonicParsing="false" onAction="#goToSlots" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="Slots Details" textFill="#ebf2ec" />
             <Button fx:id="slots_btn11" layoutX="93.0" layoutY="405.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Manual vehicle Clearance" textFill="#ebf2ec" />
          </children></AnchorPane>
-        <AnchorPane prefHeight="428.0" prefWidth="1536.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <AnchorPane prefHeight="511.0" prefWidth="1536.0" style="-fx-background-color: green;" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="2">
          <children>
-            <GridPane hgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <GridPane hgap="10.0" prefHeight="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -50,7 +52,25 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Vehicle" textFill="#fffbfb" />
+                  <Label text="Vehicle" textFill="#fffbfb" GridPane.columnIndex="1" />
+                  <AnchorPane prefHeight="498.0" prefWidth="763.0" style="-fx-background-color: blue;">
+                     <children>
+                        <AnchorPane layoutY="241.0" prefHeight="462.0" prefWidth="763.0" style="-fx-background-color: yellow;">
+                           <children>
+                              <Label layoutX="41.0" layoutY="39.0" style="-fx-font-weight: bold;" text="Manual vehicle Book-in">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="229.0" layoutY="121.0" prefHeight="41.0" prefWidth="255.0" promptText="Number Plate" />
+                              <TextField layoutX="229.0" layoutY="202.0" prefHeight="41.0" prefWidth="255.0" promptText="Time In" />
+                              <Button layoutX="285.0" layoutY="428.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="142.0" text="Submit" />
+                              <TextField layoutX="229.0" layoutY="292.0" prefHeight="41.0" prefWidth="255.0" promptText="Slot" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="1" />
                </children>
             </GridPane>
          </children></AnchorPane>
