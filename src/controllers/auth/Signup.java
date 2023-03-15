@@ -1,5 +1,5 @@
 package controllers.auth;
-import utils.db_config;
+import utils.DbConfig;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -63,7 +63,7 @@ public class Signup {
 
     private void save_to_database(String email, String username, String phone, String password) {
         String insertQuery = "INSERT INTO users (username, email, phone, password) " +"VALUES ('" + username + "', '" + email + "', " + phone + ", '" + password + "')";
-        db_config.executeQuery(insertQuery);
+        DbConfig.executeQuery(insertQuery);
     }
 
     private boolean sanitize_phone() {

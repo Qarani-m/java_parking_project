@@ -1,28 +1,27 @@
 package controllers.home.table;
 
+import controllers.home.Slots;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
-import javafx.scene.chart.PieChart;
 import javafx.scene.control.*;
-import javafx.animation.Timeline;
-import javafx.animation.KeyFrame;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.util.Duration;
-import utils.db_config;
+import utils.DbConfig;
+import utils.Routes;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.Timer;
-import java.util.TimerTask;
 
 
-public class Table extends Thread implements Initializable{
+public class MainController extends Thread implements Initializable{
     private Timeline timeline;
-    private Timeline timeline2;
 
     @FXML
     private TableView<Vehicle> table;
@@ -67,6 +66,10 @@ public class Table extends Thread implements Initializable{
     private Button reservation_btn;
     @FXML
     private Label turnover;
+
+
+
+
     String table_name = "lot";
     String searchQuery = "select * from "+table_name+" ORDER BY id DESC;";
 
@@ -74,13 +77,15 @@ public class Table extends Thread implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println(searchQuery);
 
-        db_config db = new db_config();
+        DbConfig db = new DbConfig();
         tables_setup(db);
         new Barchart(bar_chart);
         Statistics st =new Statistics();
         st.start();
 
+
         timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
+            new Slots();
             reserved_space.setText(String.valueOf(st.reservation_count));
             free_space.setText(String.valueOf(st.free_space));
             percent_occupancy.setText(String.valueOf(st.percent_occupancy));
@@ -101,7 +106,7 @@ public class Table extends Thread implements Initializable{
     }
     public void search_db(KeyEvent keyEvent) {searchQuery="select * from lot where plate_number like '%"+searchbar.getText()+"%'";}
 
-    private void tables_setup(db_config db) {
+    private void tables_setup(DbConfig db) {
         date_column.setCellValueFactory(new PropertyValueFactory<Vehicle, String>("date_column"));
         plates_column.setCellValueFactory(new PropertyValueFactory<Vehicle, String>("plates_column"));
         slotnumber_column.setCellValueFactory(new PropertyValueFactory<Vehicle, String>("slotnumber_column"));
@@ -114,14 +119,14 @@ public class Table extends Thread implements Initializable{
         table_name = "lot";
         booked_btn.setStyle("-fx-background-color: #dc143c;");
         reservation_btn.setStyle("-fx-background-color: #2d2d2d;");
-
-
     }
     public void reservation_table(ActionEvent actionEvent) {
         table_name = "reservations";
         reservation_btn.setStyle("-fx-background-color: #dc143c;");
         booked_btn.setStyle("-fx-background-color: #2d2d2d;");
-
     }
 
+    public void gotToSlots(ActionEvent actionEvent) throws IOException {
+        new Routes().goTo("../views/home/slots.fxml", actionEvent);
+    }
 }

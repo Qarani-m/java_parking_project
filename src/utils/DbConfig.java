@@ -6,10 +6,12 @@ import javafx.collections.ObservableList;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import static java.lang.Integer.parseInt;
 
-public class db_config {
+public class DbConfig {
     private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/parking_project?useSSL=false"   ;
     private static final String DATABASE_USERNAME = "root";
     public static ArrayList<String[]> list = new ArrayList<>();
@@ -27,6 +29,9 @@ public class db_config {
                 resultSet = statement.executeQuery(query);
                 if(query.contains("SELECT password FROM users")) {
                         return login(resultSet);
+                } else if(query.contains("select * from slots")) {
+                    System.out.println("--------");
+                    return slotsHandler(resultSet);
                 } else if(query.contains("select count(id) from")) {
                     return reservation_count(resultSet);
                 }else if(query.contains("SELECT charge FROM lot WHERE date_ BETWEEN DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND CURDATE()")) {
@@ -76,6 +81,33 @@ public class db_config {
         return null;
     }
 
+    private static ArrayList<String>[] slotsHandler(ResultSet resultSet) throws SQLException {
+        boolean reserved = Boolean.parseBoolean(null);
+        boolean occupied = Boolean.parseBoolean(null);
+        ArrayList<String >occupied_values= new ArrayList<String>();
+        ArrayList<String >reserved_values= new ArrayList<String>();
+        String id = null;
+
+        while (resultSet.next()) {
+            reserved = resultSet.getBoolean("reserved");
+            occupied = resultSet.getBoolean("occupied");
+            id = resultSet.getString("slot_id");
+            if(occupied==true){
+                occupied_values.add(id);
+//                System.out.println(id+" occupied");
+            }
+            if(reserved==true){
+                reserved_values.add(id);
+//                System.out.println(id+" reserved");
+            }
+
+        }
+        ArrayList<String>[] arrayLists = new ArrayList[2];
+        arrayLists[0]= occupied_values;
+        arrayLists[1]= reserved_values;
+        return arrayLists;
+    }
+
     private static String barchart(ResultSet resultSet) throws SQLException {
         int count = 0;
         while (resultSet.next()) {
@@ -83,10 +115,9 @@ public class db_config {
 //            System.out.println(count);
 
         }
-        System.out.println(count);
+
         return "count";
     }
-
     private static float turnover(ResultSet resultSet) throws SQLException {
          int count1 = 0;
         while(resultSet.next()){
@@ -94,7 +125,6 @@ public class db_config {
         }
         return count1;
     }
-
     private static Object weekly(ResultSet resultSet) throws SQLException {
         int weekly_sum = 0;
         ArrayList<Integer> weekly_values = new ArrayList<Integer>();
@@ -104,10 +134,8 @@ public class db_config {
         for (int i = 0; i < weekly_values.size(); i++) {
             weekly_sum += weekly_values.get(i);
         }
-
         return String.valueOf(weekly_sum);
     }
-
     private static String todays_income(ResultSet resultSet) throws SQLException {
         int todays_sum = 0;
         ArrayList<Integer> todays_vals = new ArrayList<Integer>();
@@ -119,7 +147,6 @@ public class db_config {
         }
         return String.valueOf(todays_sum);
     }
-
     private static Object avg_time(ResultSet resultSet) throws SQLException {
         String avg_time  = null;
                 while (resultSet.next()) {
@@ -139,10 +166,7 @@ public class db_config {
     while (rs.next()) {password = rs.getString("password");}
     return password;
 }
-
-
-
-public static ObservableList<Vehicle> table_data(ResultSet rs) throws SQLException {
+   public static ObservableList<Vehicle> table_data(ResultSet rs) throws SQLException {
     ObservableList<Vehicle> vehicleList = FXCollections.observableArrayList();
     while (rs.next()) {
         String date = rs.getString("date_");

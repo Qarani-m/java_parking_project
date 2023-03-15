@@ -1,0 +1,33 @@
+{C1R1S01,C1R1S02,C1R1S03,C1R1S04,C1R1S05,C1R1S06,C1R1S07,C1R1S08,C1R1S09,C1R1S10,C1R1S11,
+C1R1S12,C1R2S01,C1R2S02,C1R2S03,C1R2S04,C1R2S05,C1R2S06,C1R2S07,C1R2S08,C1R2S09,
+C1R2S10,C1R2S11,C1R2S12,C1R3S01,C1R3S02,C1R3S03,C1R3S04,C1R3S05,C1R3S06,C1R3S07,C1R3S08,
+C1R3S09,C1R3S10,C1R3S11,C1R3S12,C2R1S01,C2R1S02,C2R1S03,C2R1S04,C2R1S05,C2R1S06,C2R1S07,
+C2R1S08,C2R1S09,C2R1S10,C2R1S11,C2R1S12,C2R2S01,C2R2S02,C2R2S03,C2R2S04,C2R2S05,C2R2S06,
+C2R2S07,C2R2S08,C2R2S09,C2R2S10,C2R2S11,C2R2S12,C2R3S01,C2R3S02,C2R3S03,C2R3S04,C2R3S05,
+C2R3S06,C2R3S07,C2R3S08,C2R3S09,C2R3S10,C2R3S11,C2R3S12,C3R1S01,C3R1S02,C3R1S03,C3R1S04,C3R1S05,
+C3R1S06,C3R1S07,C3R1S08,C3R1S09,C3R1S10,C3R1S11,C3R1S12,C3R2S01,C3R2S02,C3R2S03,C3R2S04,C3R2S05,C3R2S06,
+C3R2S07,C3R2S08,C3R2S09,C3R2S10,C3R2S11,C3R2S12,C3R3S01,C3R3S02,C3R3S03,C3R3S04,C3R3S05,C3R3S06,C3R3S07,
+C3R3S08,C3R3S09,C3R3S10,C3R3S11,C3R3S12}
+
+
+
+
+        for (int c = 1; c <= 3; c++) {
+            for (int r = 1; r <= 3; r++) {
+                for (int s = 1; s <= 12; s++) {
+                    String id = "C" + c + "R" + r + "S" + String.format("%02d", s);
+                    String fileName = "example.txt";
+
+                    try {
+                        FileWriter fileWriter = new FileWriter(fileName, true);
+                        fileWriter.write(id+",");
+
+                        fileWriter.close();
+                        System.out.println("Text has been appended to the file.");
+                    } catch (IOException e) {
+                        System.out.println("An error occurred while trying to append text to the file.");
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }

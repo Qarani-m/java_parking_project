@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import utils.db_config;
+import utils.DbConfig;
 
 public class Login {
     @FXML
@@ -20,7 +20,7 @@ public class Login {
         String password_text = password.getText();
         System.out.println("s");
         String selectQuery = "SELECT password FROM users WHERE username='"+email_text+"' OR email='"+email_text+"';";
-        String pass = (String) db_config.executeQuery(selectQuery);
+        String pass = (String) DbConfig.executeQuery(selectQuery);
         System.out.println(pass);
         if(pass==null){
             error.setText("Invalid email / password");

@@ -4,7 +4,6 @@
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -18,7 +17,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane hgap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2b2b2b;" vgap="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.home.table.Table">
+<GridPane hgap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2b2b2b;" vgap="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.home.FinancialReport">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" />
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="80.0" />
@@ -42,8 +41,10 @@
             </Label>
             <Button fx:id="logout_btn" layoutX="134.0" layoutY="955.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Logout" textFill="SILVER" />
             <Button fx:id="email" layoutX="107.0" layoutY="906.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="emqarani@gmail.com" textFill="SILVER" />
-            <Button fx:id="statistics_btn" layoutX="93.0" layoutY="192.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="STATISTICS" textFill="#ebf2ec" />
-            <Button fx:id="slots_btn" layoutX="93.0" layoutY="262.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="SLOTS" textFill="#ebf2ec" />
+            <Button fx:id="statistics_btn" layoutX="93.0" layoutY="192.0" mnemonicParsing="false" onAction="#goToStatistics" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="STATISTICS" textFill="#ebf2ec" AnchorPane.topAnchor="192.0" />
+            <Button fx:id="slots_btn" layoutX="93.0" layoutY="262.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Generate Finacial report" textFill="#ebf2ec" />
+            <Button fx:id="slots_btn1" layoutX="86.0" layoutY="335.0" mnemonicParsing="false" onAction="#goToSlots" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="Slots Details" textFill="#ebf2ec" />
+            <Button fx:id="slots_btn11" layoutX="93.0" layoutY="405.0" mnemonicParsing="false" onAction="#vehicleClearance" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="Manual vehicle Clearance" textFill="#ebf2ec" />
          </children></AnchorPane>
         <AnchorPane prefHeight="428.0" prefWidth="1536.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
          <children>
@@ -61,12 +62,11 @@
                         <Insets left="5.0" />
                      </GridPane.margin>
                      <children>
-                        <Label layoutX="29.0" layoutY="14.0" prefHeight="33.0" prefWidth="229.0" text="Lot Statistics" textFill="SILVER">
+                        <Label layoutX="29.0" layoutY="14.0" prefHeight="33.0" prefWidth="229.0" style="-fx-font-weight: bold;" text="Lot Statistics" textFill="SILVER">
                            <font>
                               <Font size="25.0" />
                            </font>
                         </Label>
-                        <PieChart fx:id="pie_chart" layoutX="29.0" layoutY="61.0" prefHeight="326.0" prefWidth="441.0" style="lab: 30px;" stylesheets="@pie_chart.css" />
                         <Label layoutX="445.0" layoutY="61.0" prefHeight="16.0" prefWidth="107.0" text="Free Space" textFill="#fefefe" />
                         <Label layoutX="445.0" layoutY="123.0" prefHeight="30.0" prefWidth="127.0" text="Reserved Spaces" textFill="#fefefe" />
                         <Label layoutX="445.0" layoutY="160.0" prefHeight="30.0" prefWidth="127.0" text="Percent Occupacy" textFill="#fefefe" />
@@ -81,6 +81,72 @@
                         <Label fx:id="filled_floors" layoutX="623.0" layoutY="248.0" prefHeight="16.0" prefWidth="107.0" text="0 of 4" textFill="#fefefe" />
                         <Label fx:id="avg_time" layoutX="623.0" layoutY="289.0" prefHeight="16.0" prefWidth="107.0" text="3.63 hrs" textFill="#fefefe" />
                         <Label fx:id="occupied" layoutX="623.0" layoutY="100.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label layoutX="29.0" layoutY="54.0" prefHeight="30.0" prefWidth="150.0" text="Expenses" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="152.0" prefHeight="30.0" prefWidth="150.0" text="Income/week" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="256.0" prefHeight="30.0" prefWidth="193.0" text="Parking price" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="84.0" prefHeight="16.0" prefWidth="82.0" text="total price" textFill="SILVER" />
+                        <Label layoutX="29.0" layoutY="182.0" prefHeight="16.0" prefWidth="82.0" text="total price" textFill="SILVER" />
+                        <Label layoutX="29.0" layoutY="289.0" prefHeight="16.0" prefWidth="82.0" text="total price" textFill="SILVER" />
+                        <Label layoutX="222.0" layoutY="54.0" prefHeight="30.0" prefWidth="237.0" text="Turnover rate" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="222.0" layoutY="152.0" prefHeight="30.0" prefWidth="237.0" text="Peak Usage" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="222.0" layoutY="84.0" prefHeight="16.0" prefWidth="82.0" text="percentage" textFill="SILVER" />
+                        <Label layoutX="222.0" layoutY="182.0" prefHeight="16.0" prefWidth="82.0" text="hours" textFill="SILVER" />
+                        <Label layoutX="29.0" layoutY="108.0" prefHeight="30.0" prefWidth="150.0" text="ksh 2380 " textFill="#c0c0c3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="weekly_income" layoutX="29.0" layoutY="209.0" prefHeight="30.0" prefWidth="150.0" text="ksh 2380 " textFill="#c0c0c3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="312.0" prefHeight="30.0" prefWidth="150.0" text="ksh 100/hr" textFill="#e0e0e0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="222.0" layoutY="201.0" prefHeight="30.0" prefWidth="150.0" text="1700 hrs" textFill="#f0f0f0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="turnover" layoutX="222.0" layoutY="108.0" prefHeight="30.0" prefWidth="150.0" text="+ 17 %" textFill="#e0e0e0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="222.0" layoutY="256.0" prefHeight="30.0" prefWidth="193.0" text="Profit" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="222.0" layoutY="289.0" prefHeight="16.0" prefWidth="82.0" text="percentage" textFill="SILVER" />
+                        <Label layoutX="222.0" layoutY="312.0" prefHeight="30.0" prefWidth="150.0" text="+ 12%" textFill="#e0e0e0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="402.0" prefWidth="930.0" style="-fx-background-radius: 30px; -fx-background-color: #444444;" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
@@ -95,7 +161,7 @@
                         </Label>
                         <BarChart fx:id="bar_chart" barGap="5.0" layoutX="24.0" layoutY="43.0" legendSide="RIGHT" prefHeight="353.0" prefWidth="684.0" style="fil: red;" stylesheets="@homepage.css">
                           <xAxis>
-                            <CategoryAxis side="BOTTOM" startMargin="0.0" style="-fx-tick-label-fill: red;" fx:id="x_axis" />
+                            <CategoryAxis side="BOTTOM" startMargin="0.0" style="-fx-tick-label-fill: #e0e0e0;" fx:id="x_axis" />
                           </xAxis>
                           <yAxis>
                             <NumberAxis fx:id="y_axis" label="NO. of vehicles" prefHeight="312.0" prefWidth="49.0" side="LEFT" style="-fx-tick-label-fill: #C0C0C0;" tickLabelFill="SILVER">
@@ -121,7 +187,7 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="searchbar" layoutX="1069.0" layoutY="4.0" minHeight="35.0" prefHeight="53.0" prefWidth="421.0" promptText="Search . . . " style="-fx-background-radius: 20px; -fx-background-color: #2b2b2b; -fx-font-family: kalam; -fx-border-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="4.0">
+                  <TextField fx:id="searchbar" layoutX="1069.0" layoutY="4.0" minHeight="35.0" onKeyPressed="#search_db" prefHeight="53.0" prefWidth="421.0" promptText="Search . . . " style="-fx-background-radius: 20px; -fx-background-color: #e0e0e0; -fx-font-family: kalam; -fx-border-color: transparent;" stylesheets="@table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="4.0">
                      <padding>
                         <Insets bottom="20.0" left="20.0" right="10.0" top="20.0" />
                      </padding>
@@ -129,6 +195,8 @@
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
                   </TextField>
+                  <Button fx:id="booked_btn" layoutX="262.0" layoutY="14.0" mnemonicParsing="false" onAction="#booked_table" prefHeight="33.0" prefWidth="199.0" style="-fx-background-color: #dc143c;" text="Parked" textFill="WHITE" />
+                  <Button fx:id="reservation_btn" layoutX="546.0" layoutY="14.0" mnemonicParsing="false" onAction="#reservation_table" prefHeight="33.0" prefWidth="199.0" style="-fx-background-color: #2d2d2d;" text="Reservations" textFill="WHITE" />
                </children>
             </AnchorPane>
             <TableView fx:id="table" layoutX="181.0" layoutY="74.0" prefHeight="40.0" prefWidth="1516.0" style="-fx-background-radius: 30px; -fx-background-insets: 0,0010; -fx-background-color: #2b2b2b;" stylesheets="@table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
@@ -138,8 +206,8 @@
                   <TableColumn fx:id="slotnumber_column" prefWidth="500.0" text="SLOT NUMBER" />
                   <TableColumn fx:id="entrytime_column" prefWidth="130.0" text="ENTRY TIME" />
                   <TableColumn fx:id="departuretime_column" prefWidth="75.0" text="DEPARTURE TIME" />
-                  <TableColumn fx:id="charge_column" prefWidth="75.0" text="CHARGE" />
-                  <TableColumn fx:id="paymentid_column" prefWidth="75.0" text="PAYMENT ID" />
+                  <TableColumn fx:id="charge_column" prefWidth="75.0" text="PAYMENT ID" />
+                  <TableColumn fx:id="paymentid_column" prefWidth="75.0" text="AMOUNT" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

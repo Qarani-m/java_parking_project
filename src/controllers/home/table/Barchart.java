@@ -2,7 +2,7 @@ package controllers.home.table;
 
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
-import utils.db_config;
+import utils.DbConfig;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,8 +28,8 @@ public class Barchart {
         for (int i = 0; i < sizes.length; i++) {
             for (int j = 0; j < dates.length; j++) {
                 String q ="select count(*) from lot where size_ = '"+sizes[i]+"' and date_ between'"+dates[j][0]+"' and '"+dates[j][1]+ "'";
-                Object target=  db_config.executeQuery(q);
-                System.out.println(target+"-----"+q);
+                Object target=  DbConfig.executeQuery(q);
+//                System.out.println(target+"-----"+q);
             }
         }
 
@@ -46,7 +46,7 @@ public class Barchart {
         series1.getData().add(new XYChart.Data("JAN",171));
         series1.getData().add(new XYChart.Data("FEB",212));
         series1.getData().add(new XYChart.Data("MAR",150));
-        new db_config().executeQuery("select count(*) from lot where ");
+        new DbConfig().executeQuery("select count(*) from lot where ");
         series2.setName("medium");
         series2.getData().add(new XYChart.Data("JAN",122));
         series2.getData().add(new XYChart.Data("FEB",200));

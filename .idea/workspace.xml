@@ -10,11 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8af9d926-2bcb-43bd-95c7-b96399ae1730" name="Changes" comment="s">
+      <change afterPath="$PROJECT_DIR$/src/controllers/home/FinancialReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/home/VehicleClearance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/home/table/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/home/table/sv2.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/home/table/t.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Routes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/home/financials.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parking_project/utils/db_config.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/utils/db_config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parking_project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parking_project/controllers/auth/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/controllers/auth/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parking_project/controllers/auth/Signup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/controllers/auth/Signup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parking_project/utils/db_config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parking_project/views/home/home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth/Signup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/Slots.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Barchart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/table/Barchart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/table/Statistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/db_config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db_config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/table/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/db_config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DbConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/v2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/v2.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +42,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -48,14 +67,35 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "/home/martin/Desktop/Java/parking_project",
+    "last_opened_file_path": "/home/martin/Desktop/Java/parking_project/src/controllers/home/table",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/controllers/home/table" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="controllers.home" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="DbConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utils.DbConfig" />
+      <module name="parking_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Decryption" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controllers.auth.Decryption" />
       <module name="parking_project" />
@@ -90,6 +130,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controllers.home.table.MainController" />
+      <module name="parking_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.home.table.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Signup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controllers.auth.Signup" />
       <module name="parking_project" />
@@ -103,36 +156,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Table" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="controllers.home.table.Table" />
-      <module name="parking_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controllers.home.table.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="db_config" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="utils.db_config" />
-      <module name="parking_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Table" />
-        <item itemvalue="Application.db_config" />
+        <item itemvalue="Application.MainController" />
+        <item itemvalue="Application.DbConfig" />
         <item itemvalue="Application.Decryption" />
         <item itemvalue="Application.Encryption" />
         <item itemvalue="Application.Signup" />

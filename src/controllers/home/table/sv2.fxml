@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<GridPane hgap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2b2b2b;" vgap="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.home.table.MainController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="80.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="40.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="435.0" prefWidth="100.0" style="-fx-background-color: #444444;" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.rowSpan="2">
+         <children>
+            <Label fx:id="email_abreviation" layoutX="164.0" layoutY="837.0" prefHeight="57.0" prefWidth="57.0" style="-fx-background-radius: 50%; -fx-background-color: #c0c0c0;" text="EM">
+               <padding>
+                  <Insets left="19.0" />
+               </padding>
+            </Label>
+            <Button fx:id="logout_btn" layoutX="134.0" layoutY="955.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Logout" textFill="SILVER" />
+            <Button fx:id="email" layoutX="107.0" layoutY="906.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="emqarani@gmail.com" textFill="SILVER" />
+            <Button fx:id="statistics_btn" layoutX="93.0" layoutY="192.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="STATISTICS" textFill="#ebf2ec" />
+            <Button fx:id="slots_btn" layoutX="93.0" layoutY="262.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Generate Finacial report" textFill="#ebf2ec" />
+            <Button fx:id="slots_btn1" layoutX="86.0" layoutY="335.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Slots Details" textFill="#ebf2ec" />
+            <Button fx:id="slots_btn11" layoutX="93.0" layoutY="405.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Manual vehicle Clearance" textFill="#ebf2ec" />
+            <Button fx:id="slots_btn111" layoutX="93.0" layoutY="471.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Staff" textFill="#ebf2ec" />
+         </children>
+      </AnchorPane>
+      <ScrollPane GridPane.columnIndex="1" GridPane.rowSpan="2">
+         <content>
+            <AnchorPane prefHeight="1256.0" prefWidth="1521.0">
+               <children>
+                  <AnchorPane prefHeight="1111.0" prefWidth="486.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutY="323.0" prefHeight="266.0" prefWidth="484.0">
+                           <children>
+                              <Line endX="32.0" layoutX="101.0" layoutY="72.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="101.0" layoutY="133.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="101.0" layoutY="195.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="276.0" layoutY="72.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="276.0" layoutY="133.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="276.0" layoutY="195.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="451.0" layoutY="72.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="451.0" layoutY="133.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="451.0" layoutY="195.0" startX="-100.0" />
+                              <AnchorPane fx:id="C1R2S12" layoutX="351.0" layoutY="195.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" text="C1R2S12" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R2S03" layoutX="351.0" layoutY="2.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" text="C1R2S03" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R2S09" layoutX="351.0" layoutY="131.0" prefHeight="64.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" text="C1R2S09" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R2S08" layoutX="176.0" layoutY="133.0" prefHeight="64.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" text="C1R2S08" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R2S10" layoutX="1.0" layoutY="195.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" text="C1R2S10" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R2S07" layoutX="-1.0" layoutY="133.0" prefHeight="64.0" prefWidth="135.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" text="C1R2S07" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R2S11" layoutX="176.0" layoutY="195.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" text="C1R2S11" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R2S04" layoutX="1.0" layoutY="72.0" prefHeight="66.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" text="C1R2S04" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R2S01" layoutX="1.0" layoutY="2.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" text="C1R2S01" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R2S05" layoutX="176.0" layoutY="73.0" prefHeight="57.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" text="C1R2S05" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R2S02" layoutX="176.0" layoutY="2.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" text="C1R2S02" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R2S06" layoutX="351.0" layoutY="73.0" prefHeight="57.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" text="C1R2S06" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="628.0" prefHeight="292.0" prefWidth="484.0">
+                           <children>
+                              <Line endX="32.0" layoutX="101.0" layoutY="72.0" startX="-100.0" AnchorPane.topAnchor="71.5" />
+                              <Line endX="32.0" layoutX="101.0" layoutY="133.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="101.0" layoutY="195.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="276.0" layoutY="72.0" startX="-100.0" AnchorPane.topAnchor="132.5" />
+                              <Line endX="32.0" layoutX="276.0" layoutY="133.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="276.0" layoutY="195.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="451.0" layoutY="72.0" startX="-100.0" AnchorPane.topAnchor="71.5" />
+                              <Line endX="32.0" layoutX="451.0" layoutY="133.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="451.0" layoutY="195.0" startX="-100.0" />
+                              <AnchorPane fx:id="C1R3S07" layoutX="1.0" layoutY="131.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="25.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S07" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S04" layoutX="1.0" layoutY="73.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="25.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S04" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S08" layoutX="176.0" layoutY="130.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="33.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S08" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S05" layoutX="176.0" layoutY="72.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="25.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S05" />
+                                    <Line endX="13.0" endY="-1.0" layoutX="120.0" startX="-120.0" startY="-1.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S04" layoutX="1.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S01" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S02" layoutX="176.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S02" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S10" layoutX="1.0" layoutY="196.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S10" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S11" layoutX="176.0" layoutY="196.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S11" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S12" layoutX="351.0" layoutY="196.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S12" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S09" layoutX="351.0" layoutY="134.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S09" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S03" layoutX="351.0" layoutY="2.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S03" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S06" layoutX="351.0" layoutY="69.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S06" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <Line endX="300.5" layoutX="207.0" layoutY="323.0" startX="-216.0" strokeWidth="5.0" />
+                        <Line endX="286.0" layoutX="218.0" layoutY="611.0" startX="-216.0" strokeWidth="5.0" />
+                        <Line endX="286.0" layoutX="218.0" layoutY="932.0" startX="-216.0" strokeWidth="5.0" />
+                        <AnchorPane layoutX="11.0" layoutY="847.0" prefHeight="272.0" prefWidth="484.0" AnchorPane.bottomAnchor="30.0">
+                           <children>
+                              <Line endX="32.0" layoutX="101.0" layoutY="72.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="101.0" layoutY="133.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="101.0" layoutY="195.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="276.0" layoutY="72.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="276.0" layoutY="133.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="276.0" layoutY="195.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="451.0" layoutY="72.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="451.0" layoutY="133.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="451.0" layoutY="195.0" startX="-100.0" />
+                              <AnchorPane fx:id="C1R3S071" layoutX="1.0" layoutY="131.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="25.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S07" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S04" layoutX="1.0" layoutY="73.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="25.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S04" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S081" layoutX="176.0" layoutY="130.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="33.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S08" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S051" layoutX="176.0" layoutY="72.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="25.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S05" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S041" layoutX="1.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S01" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S021" layoutX="176.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S02" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S101" layoutX="1.0" layoutY="196.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S10" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S111" layoutX="176.0" layoutY="196.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S11" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S121" layoutX="351.0" layoutY="196.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S12" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S091" layoutX="351.0" layoutY="134.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S09" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S031" layoutX="351.0" layoutY="2.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S03" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R3S061" layoutX="351.0" layoutY="69.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="16.0" prefWidth="72.0" text="C1R3S06" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="11.0" layoutY="54.0" prefHeight="266.0" prefWidth="484.0">
+                           <children>
+                              <Line endX="32.0" layoutX="101.0" layoutY="72.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="101.0" layoutY="133.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="101.0" layoutY="195.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="276.0" layoutY="72.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="276.0" layoutY="133.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="276.0" layoutY="195.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="451.0" layoutY="72.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="451.0" layoutY="133.0" startX="-100.0" />
+                              <Line endX="32.0" layoutX="451.0" layoutY="195.0" startX="-100.0" />
+                              <AnchorPane fx:id="C1R1S07" layoutX="1.0" layoutY="131.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="8.0" layoutY="31.0" text="C1R1S07" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R1S04" layoutX="1.0" layoutY="73.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="33.0" text="C1R1S04" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R1S12" layoutX="351.0" layoutY="196.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="36.0" text="C1R1S12" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R1S08" layoutX="176.0" layoutY="130.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="33.0" text="C1R1S08" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R1S05" layoutX="176.0" layoutY="72.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="12.0" layoutY="31.0" text="C1R1S05" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R1S1" layoutX="1.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="41.0" text="C1R1S01" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R1S02" layoutX="176.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="7.0" layoutY="39.0" text="C1R1S02" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R1S09" layoutX="1.0" layoutY="196.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="7.0" layoutY="28.0" text="C1R1S10" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R1S10" layoutX="176.0" layoutY="196.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="22.0" layoutY="26.0" text="C1R1S11" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R1S03" layoutX="351.0" layoutY="-1.0" prefHeight="71.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="41.0" text="C1R1S03" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R1S06" layoutX="351.0" layoutY="70.0" prefHeight="65.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="33.0" text="C1R1S06" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="C1R1S09" layoutX="351.0" layoutY="134.0" prefHeight="64.0" prefWidth="133.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="32.0" text="C1R1S09" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="176.0" layoutY="29.0" style="-fx-font-weight: bold;" text="FIRST FLOOR ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Line endY="963.0" layoutX="507.0" layoutY="153.0" startY="-153.0" />
+                        <Line endY="963.0" layoutX="1014.0" layoutY="163.0" startY="-153.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+    </children>
+</GridPane>
