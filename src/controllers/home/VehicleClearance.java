@@ -6,8 +6,8 @@ import utils.Routes;
 import java.io.IOException;
 
 public class VehicleClearance {
-    public void goToStatistics(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/v2.fxml", actionEvent);}
-    public void goToSlots(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/finacial_report.fxml", actionEvent);}
-    public void financialReport(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/vehicle_clearance.fxml", actionEvent);}
+    public void goToDashboard(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/home.fxml", actionEvent);}
+    public void goToSlots(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/slots.fxml", actionEvent);}
+    public void goToFinancials(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/finacial_report.fxml", actionEvent);}
 
 }

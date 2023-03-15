@@ -126,7 +126,7 @@ public class MainController extends Thread implements Initializable{
         booked_btn.setStyle("-fx-background-color: #2d2d2d;");
     }
 
-    public void gotToSlots(ActionEvent actionEvent) throws IOException {
-        new Routes().goTo("../views/home/slots.fxml", actionEvent);
-    }
+    public void gotToSlots(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/slots.fxml", actionEvent);}
+    public void goToFinancials(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/finacial_report.fxml", actionEvent);}
+    public void goToManualClearance(ActionEvent actionEvent) throws IOException { new Routes().goTo("../views/home/vehicle_clearance.fxml", actionEvent);}
 }

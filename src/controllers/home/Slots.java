@@ -155,7 +155,7 @@ public class Slots implements Initializable  {
             }
         }
     }
-    public void goToDashboard(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/v2.fxml", actionEvent);}
+    public void goToDashboard(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/home.fxml", actionEvent);}
     public void goToFinancials(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/finacial_report.fxml", actionEvent);}
     public void goToManualClearance(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/vehicle_clearance.fxml", actionEvent);}
 

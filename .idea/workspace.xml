@@ -10,29 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8af9d926-2bcb-43bd-95c7-b96399ae1730" name="Changes" comment="s">
-      <change afterPath="$PROJECT_DIR$/src/controllers/home/FinancialReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/home/VehicleClearance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/home/table/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/home/table/sv2.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/home/table/t.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Routes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/home/financials.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/parking_project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parking_project/controllers/auth/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/controllers/auth/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parking_project/controllers/auth/Signup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parking_project/controllers/auth/Signup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parking_project/utils/db_config.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parking_project/views/home/home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parking_project/views/home/homepage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parking_project/views/home/pie_chart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parking_project/views/home/table.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/auth/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/auth/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth/Signup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/home/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/Slots.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Barchart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/table/Barchart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/table/Statistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/home/table/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/table/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/db_config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DbConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/home.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/v2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/v2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/FinancialReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/FinancialReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/Slots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/Slots.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/VehicleClearance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/VehicleClearance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/table/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/table/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/finacial_report.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/finacial_report.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/financials.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/css/homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/pie_chart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/css/pie_chart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/slot_details.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/staff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/staff.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/css/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/v2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/vehicle_clearance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/vehicle_clearance.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +73,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/controllers/home/table" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/home/css" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="controllers.home" />

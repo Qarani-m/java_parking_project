@@ -42,9 +42,9 @@
             <Button fx:id="logout_btn" layoutX="134.0" layoutY="955.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Logout" textFill="SILVER" />
             <Button fx:id="email" layoutX="107.0" layoutY="906.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="emqarani@gmail.com" textFill="SILVER" AnchorPane.leftAnchor="107.0" />
             <Button fx:id="statistics_btn" layoutX="93.0" layoutY="192.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="STATISTICS" textFill="#ebf2ec" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="192.0" />
-            <Button fx:id="financial_report" layoutX="93.0" layoutY="262.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="FINANCIAL REPORT" textFill="#ebf2ec" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="262.0" />
+            <Button fx:id="financial_report" layoutX="93.0" layoutY="262.0" mnemonicParsing="false" onAction="#goToFinancials" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="FINANCIAL REPORT" textFill="#ebf2ec" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="262.0" />
             <Button fx:id="slots_btn" layoutX="86.0" layoutY="335.0" mnemonicParsing="false" onAction="#gotToSlots" prefHeight="30.0" prefWidth="237.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="SLOT DETAILS" textFill="#ebf2ec" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="335.0" />
-            <Button fx:id="vehicle_clearance" layoutX="93.0" layoutY="405.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="MANUAL VEHICLE CLEARANCE" textFill="#ebf2ec" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="405.0" />
+            <Button fx:id="vehicle_clearance" layoutX="93.0" layoutY="405.0" mnemonicParsing="false" onAction="#goToManualClearance" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="MANUAL VEHICLE CLEARANCE" textFill="#ebf2ec" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="405.0" />
          </children></AnchorPane>
         <AnchorPane prefHeight="428.0" prefWidth="1536.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
          <children>
@@ -159,7 +159,7 @@
                               <Font size="25.0" />
                            </font>
                         </Label>
-                        <BarChart fx:id="bar_chart" barGap="5.0" layoutX="24.0" layoutY="43.0" legendSide="RIGHT" prefHeight="353.0" prefWidth="684.0" style="fil: red;" stylesheets="@homepage.css">
+                        <BarChart fx:id="bar_chart" barGap="5.0" layoutX="24.0" layoutY="43.0" legendSide="RIGHT" prefHeight="353.0" prefWidth="684.0" style="fil: red;" stylesheets="@css/homepage.css">
                           <xAxis>
                             <CategoryAxis side="BOTTOM" startMargin="0.0" style="-fx-tick-label-fill: #e0e0e0;" fx:id="x_axis" />
                           </xAxis>
@@ -187,7 +187,7 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="searchbar" layoutX="1069.0" layoutY="4.0" minHeight="35.0" onKeyPressed="#search_db" prefHeight="53.0" prefWidth="421.0" promptText="Search . . . " style="-fx-background-radius: 20px; -fx-background-color: #e0e0e0; -fx-font-family: kalam; -fx-border-color: transparent;" stylesheets="@table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="4.0">
+                  <TextField fx:id="searchbar" layoutX="1069.0" layoutY="4.0" minHeight="35.0" onKeyPressed="#search_db" prefHeight="53.0" prefWidth="421.0" promptText="Search . . . " style="-fx-background-radius: 20px; -fx-background-color: #e0e0e0; -fx-font-family: kalam; -fx-border-color: transparent;" stylesheets="@css/table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="4.0">
                      <padding>
                         <Insets bottom="20.0" left="20.0" right="10.0" top="20.0" />
                      </padding>
@@ -199,7 +199,7 @@
                   <Button fx:id="reservation_btn" layoutX="546.0" layoutY="14.0" mnemonicParsing="false" onAction="#reservation_table" prefHeight="33.0" prefWidth="199.0" style="-fx-background-color: #2d2d2d;" text="Reservations" textFill="WHITE" />
                </children>
             </AnchorPane>
-            <TableView fx:id="table" layoutX="181.0" layoutY="74.0" prefHeight="40.0" prefWidth="1516.0" style="-fx-background-radius: 30px; -fx-background-insets: 0,0010; -fx-background-color: #2b2b2b;" stylesheets="@table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
+            <TableView fx:id="table" layoutX="181.0" layoutY="74.0" prefHeight="40.0" prefWidth="1516.0" style="-fx-background-radius: 30px; -fx-background-insets: 0,0010; -fx-background-color: #2b2b2b;" stylesheets="@css/table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
               <columns>
                   <TableColumn fx:id="date_column" prefWidth="500.0" text="DATE" />
                   <TableColumn fx:id="plates_column" prefWidth="124.8" text="PLATE NUMBER" />
