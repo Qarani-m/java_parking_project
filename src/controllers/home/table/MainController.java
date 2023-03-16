@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.util.Duration;
 import utils.DbConfig;
+import utils.LoginManager;
 import utils.Routes;
 
 import java.io.IOException;
@@ -66,8 +67,10 @@ public class MainController extends Thread implements Initializable{
     private Button reservation_btn;
     @FXML
     private Label turnover;
-
-
+    @FXML
+    private Button email;
+    @FXML
+    private Label email_abreviation;
 
 
     String table_name = "lot";
@@ -129,4 +132,16 @@ public class MainController extends Thread implements Initializable{
     public void gotToSlots(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/slots.fxml", actionEvent);}
     public void goToFinancials(ActionEvent actionEvent) throws IOException {new Routes().goTo("../views/home/finacial_report.fxml", actionEvent);}
     public void goToManualClearance(ActionEvent actionEvent) throws IOException { new Routes().goTo("../views/home/vehicle_clearance.fxml", actionEvent);}
+
+    public void logout(ActionEvent actionEvent) throws IOException {
+        LoginManager.logout();
+        new Routes().goTo("../views/auth/login.fxml", actionEvent);
+
+    }
+    public void displayName(String email_){
+        email.setText(email_);
+        email_abreviation.setText(email_.substring(0, 2).toUpperCase());
+//         email_.substring(0, 2).toUpperCase()
+
+    }
 }

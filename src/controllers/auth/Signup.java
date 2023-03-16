@@ -4,7 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import utils.Routes;
 
+import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 
 public class Signup {
@@ -20,6 +22,8 @@ public class Signup {
     private TextField confirm_password;
     @FXML
     private Button error_msg;
+    Routes route = new Routes();
+
     public void initialize() {
         email.setOnKeyPressed(event -> {
             try {
@@ -44,7 +48,7 @@ public class Signup {
         if(valid_email==true&&valid_phone==true&&valid_password==true&&valid_cpassword==true){
             save_to_database(email_, username_,phone_, new Encryption().hashPassword(password_));
         }else{
-            error_msg.setText("An error occured, try again latter");
+            error_msg.setText("An error occured, try again later");
         }
     }
     private boolean sanitize_cpassword() {
@@ -64,6 +68,7 @@ public class Signup {
     private void save_to_database(String email, String username, String phone, String password) {
         String insertQuery = "INSERT INTO users (username, email, phone, password) " +"VALUES ('" + username + "', '" + email + "', " + phone + ", '" + password + "')";
         DbConfig.executeQuery(insertQuery);
+
     }
 
     private boolean sanitize_phone() {
@@ -104,5 +109,12 @@ public class Signup {
         } else {
             return false;
         }
+    }
+
+    public void alreadyHaveAnAccount(ActionEvent actionEvent) throws IOException {
+//        new Routes.goTo("../views/auth/login.fxml",actionEvent);
+        route.goTo("../views/auth/login.fxml",actionEvent);
+
+
     }
 }

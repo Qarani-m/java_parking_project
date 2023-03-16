@@ -27,7 +27,7 @@
          <top>
             <AnchorPane prefHeight="90.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="250.0" layoutY="26.0" text="Login">
+                  <Label layoutX="250.0" layoutY="26.0" text="Sign-up">
                      <font>
                         <Font size="37.0" />
                      </font>
@@ -36,6 +36,6 @@
             </AnchorPane>
          </top>
       </BorderPane>
-      <Label fx:id="login" layoutX="201.0" layoutY="595.0" prefHeight="18.0" prefWidth="211.0" text="Already have an account? Login" />
+      <Button layoutX="150.0" layoutY="582.0" mnemonicParsing="false" onAction="#alreadyHaveAnAccount" prefHeight="24.0" prefWidth="296.0" style="-fx-background-color: transparent;" text="Already have an account? Login" />
    </children>
 </AnchorPane>

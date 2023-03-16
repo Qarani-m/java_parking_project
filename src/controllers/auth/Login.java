@@ -1,6 +1,7 @@
 package controllers.auth;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -40,9 +41,8 @@ public class Login {
                     error.setText("Invalid email / password");
                 }else{
                    new LoginManager().login(email_text,pass);
-                    route.goTo("../views/auth/signup.fxml",null);
 
-                    error.setText("valid email / password");
+                    route.goDashboard("../views/home/home.fxml",email_text,actionEvent);
                 }
             }catch(Exception e){
                 System.out.println("eee;"+e);

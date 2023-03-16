@@ -28,7 +28,7 @@ public class LoginManager {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(LOGIN_FILE))) {
             out.writeObject(loginInfo);
         } catch (IOException e) {
-            // handle exception
+            System.out.println("loginmanager"+e);
         }
     }
 
@@ -48,12 +48,13 @@ public class LoginManager {
             this.loginTime = loginTime;
         }
 
-        public String getUsername() {
-            return username;
-        }
+
 
         public long getLoginTime() {
             return loginTime;
+        }
+        public String getUsername() {
+            return username;
         }
     }
 }
