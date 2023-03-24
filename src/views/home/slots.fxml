@@ -285,6 +285,11 @@
                </children>
             </AnchorPane>
             <Line endX="298.5" layoutX="207.0" layoutY="579.0" startX="-207.0" strokeWidth="5.0" />
+            <Label layoutX="84.0" layoutY="14.0" style="-fx-font-weight: bold;" text="Chuka Town public parking lot">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="894.0" prefHeight="4355.0" prefWidth="980.0" AnchorPane.bottomAnchor="502.0" AnchorPane.leftAnchor="890.0" AnchorPane.rightAnchor="519.0" AnchorPane.topAnchor="0.0">
@@ -436,7 +441,7 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <Label layoutX="176.0" layoutY="14.0" style="-fx-font-weight: bold;" text="FIRST FLOOR ">
+            <Label layoutX="59.0" layoutY="14.0" style="-fx-font-weight: bold;" text="Chuka UNI public parking lot (Gate G)">
                <font>
                   <Font size="20.0" />
                </font>
@@ -810,6 +815,11 @@
                </children>
             </AnchorPane>
             <Line endX="298.5" layoutX="207.0" layoutY="579.0" startX="-207.0" strokeWidth="5.0" />
+            <Label layoutX="92.0" layoutY="14.0" style="-fx-font-weight: bold;" text="Mitheru public parking lot">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

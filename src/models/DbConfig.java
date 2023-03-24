@@ -94,13 +94,10 @@ public class DbConfig {
             id = resultSet.getString("slot_id");
             if(occupied==true){
                 occupied_values.add(id);
-//                System.out.println(id+" occupied");
             }
             if(reserved==true){
                 reserved_values.add(id);
-//                System.out.println(id+" reserved");
             }
-
         }
         ArrayList<String>[] arrayLists = new ArrayList[2];
         arrayLists[0]= occupied_values;

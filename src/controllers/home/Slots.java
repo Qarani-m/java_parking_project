@@ -146,8 +146,10 @@ public class Slots implements Initializable  {
             ArrayList<String> innerList = vals[k];
             String color = colors[k];
             for (String element : innerList) {
+                System.out.println(element.getClass());
                 for (int i = 0; i < panes.length; i++) {
                     if (panes[i].getId().equals(element)) {
+                        System.out.println("------->>>>>>");
                              panes[i].setStyle("-fx-background-color: "+color);
                     }
                 }
