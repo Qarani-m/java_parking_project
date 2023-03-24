@@ -1,5 +1,5 @@
 package controllers.auth;
-import utils.DbConfig;
+import models.DbConfig;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

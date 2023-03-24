@@ -1,4 +1,4 @@
-package utils;
+package models;
 
 import controllers.home.table.Vehicle;
 import javafx.collections.FXCollections;

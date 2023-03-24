@@ -4,19 +4,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.time.Duration;
-import java.time.Instant;
-
 import static utils.LoginManager.isLoggedIn;
 
-public class Main extends Application {
+public class MainUser extends Application {
     public static void main(String[] args) {
         launch(args);
 

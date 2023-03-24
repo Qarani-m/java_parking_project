@@ -12,7 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.util.Duration;
-import utils.DbConfig;
+import models.DbConfig;
 import utils.LoginManager;
 import utils.Routes;
 
@@ -79,7 +79,6 @@ public class MainController extends Thread implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println(searchQuery);
-
         DbConfig db = new DbConfig();
         tables_setup(db);
         new Barchart(bar_chart);

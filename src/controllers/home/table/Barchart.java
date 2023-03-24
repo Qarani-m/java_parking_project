@@ -2,7 +2,7 @@ package controllers.home.table;
 
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
-import utils.DbConfig;
+import models.DbConfig;
 
 import java.util.Arrays;
 import java.util.List;

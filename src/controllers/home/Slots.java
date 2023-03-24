@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
-import utils.DbConfig;
+import models.DbConfig;
 import utils.Routes;
 
 import java.io.IOException;

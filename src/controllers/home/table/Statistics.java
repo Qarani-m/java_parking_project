@@ -1,5 +1,5 @@
 package controllers.home.table;
-import utils.DbConfig;
+import models.DbConfig;
 
 import static java.lang.Float.parseFloat;
 import static java.lang.Integer.parseInt;
