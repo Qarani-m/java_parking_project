@@ -1,0 +1,28 @@
+.chart-pie {
+    -fx-pie-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.chart-pie-label {
+    -fx-background-color: transparent;
+}
+
+.chart-pie:hover {
+    -fx-border-width: 0;
+}
+
+.chart-pie-label-line {
+    -fx-stroke: #8b4513;
+    -fx-fill: #8b4513;
+}
+.chart-pie > .chart-legend > .label:nth-child(1) {
+    -fx-text-fill: red;
+}
+.chart-pie-label { /*this is what you need for labels*/
+    -fx-fill: #ffffff;
+    -fx-font-size: 1em;
+}
+.chart-legend {
+   -fx-background-color:  #ffffff;
+   -fx-stroke: #daa520;
+}

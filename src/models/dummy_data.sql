@@ -1,0 +1,16 @@
+insert into lot(date_, plate_number,size_, slot_number, entry_time, departure_time, charge, payment_id) values("2023-01-01", "KDA 420E","S", "F3C1R1","19:51:27", "21:12:32", "200", "QWR4E423");
+insert into lot(date_, plate_number,size_, slot_number, entry_time, departure_time, charge, payment_id) values("2023-01-02", "KBY 151G", "S","F3C1R2","19:51:28", "21:12:33", "201", "QWR4E424");
+insert into lot(date_, plate_number, size_,slot_number, entry_time, departure_time, charge, payment_id) values("2023-01-03", "KAA 132A", "M","F3C1R3","19:51:29", "21:12:34", "202", "QWR4E425");
+insert into lot(date_, plate_number,size_, slot_number, entry_time, departure_time, charge, payment_id) values("2023-04-10", "KCE 909E", "S","L","F3C1R100","19:51:26", "21:12:31", "299", "QWR4E522");
+insert into lot(date_, plate_number,size_, slot_number, entry_time, departure_time, charge, payment_id) values("2023-02-01", "KDA 780G","S", "F3C2R1","19:51:27", "11:12:32", "200", "QWR4E423");
+insert into lot(date_, plate_number,size_, slot_number, entry_time, departure_time, charge, payment_id) values("2023-02-02", "KBY 432J", "S","F3C2R2","19:51:28", "21:12:33", "201", "QWR4E424");
+insert into lot(date_, plate_number, size_,slot_number, entry_time, departure_time, charge, payment_id) values("2023-02-03", "KAE 990C", "M","F3C1R3","19:51:29", "09:12:34", "202", "QWR4E425");
+insert into lot(date_, plate_number,size_, slot_number, entry_time, departure_time, charge, payment_id) values("2023-01-10", "KBA 909S", "L","F3C2R0","19:51:26", "17:12:31", "299", "QWR4E522");
+insert into lot(date_, plate_number,size_,slot_number, entry_time, departure_time, charge, payment_id) values("2023-03-01", "KCA 120M","L","F3C3R1","19:51:27", "12:12:32", "200", "QWR4E423");
+insert into lot(date_, plate_number,size_,slot_number, entry_time, departure_time, charge, payment_id) values("2023-03-02", "KAB 050N", "S","F1C4R1","19:51:28", "10:51:10", "201", "QW47E4H4");
+insert into lot(date_, plate_number,size_, slot_number, entry_time, departure_time, charge, payment_id) values("2023-03-03", "KBA 9S2A","S" "F3C1R4","19:51:29", "11:42:34", "202", "WGR4E25");
+insert into lot(date_, plate_number,size_, slot_number, entry_time, departure_time, charge, payment_id) values("2023-03-10", "KDC 12SH","S", "F1C1R3","19:51:26", "02:235:31", "299", "ATR4E512");
+insert into lot(date_, plate_number,size_,slot_number, entry_time, departure_time, charge, payment_id) values("2023-01-01", "KDB 120M","L","F1C3R1","19:51:27", "19:56:32", "200", "QWR4E423");
+insert into lot(date_, plate_number,size_,slot_number, entry_time, departure_time, charge, payment_id) values("2023-02-02", "KAY 051P", "S","F3C4R2","19:51:28", "12:01:10", "201", "QW47E4H4");
+insert into lot(date_, plate_number,size_, slot_number, entry_time, departure_time, charge, payment_id) values("2023-02-03", "KCA 932W","S", "F3C2R1","19:51:29", "03:42:34", "202", "WGR4E25");
+insert into lot(date_, plate_number,size_, slot_number, entry_time, departure_time, charge, payment_id) values("2023-03-14", "KBE 129H","S", "F1C3R10","19:51:26", "01:55:31", "299", "ATR4E512");

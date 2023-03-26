@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane hgap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2b2b2b;" vgap="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.home.table.MainController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="80.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="40.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="435.0" prefWidth="384.0" style="-fx-background-color: #444444;" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.rowSpan="2">
+         <children>
+            <ImageView fitHeight="57.0" fitWidth="97.0" layoutX="134.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="134.0" AnchorPane.topAnchor="51.0">
+               <image>
+                  <Image url="@../../utils/8b83ec205f3e4bf3895052a0662e5fe7.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="email_abreviation" layoutX="164.0" layoutY="837.0" prefHeight="57.0" prefWidth="57.0" style="-fx-background-radius: 50%; -fx-background-color: #c0c0c0;" text="EM" AnchorPane.leftAnchor="164.0">
+               <padding>
+                  <Insets left="19.0" />
+               </padding>
+            </Label>
+            <Button fx:id="logout_btn" layoutX="134.0" layoutY="955.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Logout" textFill="SILVER" />
+            <Button fx:id="email" layoutX="107.0" layoutY="906.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="emqarani@gmail.com" textFill="SILVER" AnchorPane.leftAnchor="107.0" />
+            <Button fx:id="statistics_btn" layoutX="93.0" layoutY="192.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="STATISTICS" textFill="#ebf2ec" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="192.0" />
+            <Button fx:id="financial_report" layoutX="93.0" layoutY="262.0" mnemonicParsing="false" onAction="#goToFinancials" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="FINANCIAL REPORT" textFill="#ebf2ec" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="262.0" />
+            <Button fx:id="slots_btn" layoutX="86.0" layoutY="335.0" mnemonicParsing="false" onAction="#gotToSlots" prefHeight="30.0" prefWidth="237.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="SLOT DETAILS" textFill="#ebf2ec" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="335.0" />
+            <Button fx:id="vehicle_clearance" layoutX="93.0" layoutY="405.0" mnemonicParsing="false" onAction="#goToManualClearance" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="MANUAL VEHICLE CLEARANCE" textFill="#ebf2ec" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="405.0" />
+         </children></AnchorPane>
+        <AnchorPane prefHeight="428.0" prefWidth="1536.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <children>
+            <GridPane hgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="432.0" prefWidth="727.0" style="-fx-background-color: #444444; -fx-background-radius: 30px;" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                     <children>
+                        <Label layoutX="29.0" layoutY="14.0" prefHeight="33.0" prefWidth="229.0" style="-fx-font-weight: bold;" text="Lot Statistics" textFill="SILVER">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="445.0" layoutY="61.0" prefHeight="16.0" prefWidth="107.0" text="Free Space" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="123.0" prefHeight="30.0" prefWidth="127.0" text="Reserved Spaces" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="160.0" prefHeight="30.0" prefWidth="127.0" text="Percent Occupacy" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="201.0" prefHeight="30.0" prefWidth="127.0" text="Todays Revenue" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="241.0" prefHeight="30.0" prefWidth="127.0" text="Filled Floor" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="282.0" prefHeight="30.0" prefWidth="127.0" text="Avarage Stay-time" textFill="#fefefe" />
+                        <Label layoutX="445.0" layoutY="85.0" prefHeight="30.0" prefWidth="127.0" text="Occupied" textFill="#fefefe" />
+                        <Label fx:id="free_space" layoutX="623.0" layoutY="69.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label fx:id="reserved_space" layoutX="623.0" layoutY="130.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label fx:id="percent_occupancy" layoutX="623.0" layoutY="167.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label fx:id="revenue" layoutX="623.0" layoutY="208.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label fx:id="filled_floors" layoutX="623.0" layoutY="248.0" prefHeight="16.0" prefWidth="107.0" text="0 of 4" textFill="#fefefe" />
+                        <Label fx:id="avg_time" layoutX="623.0" layoutY="289.0" prefHeight="16.0" prefWidth="107.0" text="3.63 hrs" textFill="#fefefe" />
+                        <Label fx:id="occupied" layoutX="623.0" layoutY="100.0" prefHeight="16.0" prefWidth="107.0" text="20" textFill="#fefefe" />
+                        <Label layoutX="29.0" layoutY="54.0" prefHeight="30.0" prefWidth="150.0" text="Expenses" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="152.0" prefHeight="30.0" prefWidth="150.0" text="Income/week" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="256.0" prefHeight="30.0" prefWidth="193.0" text="Parking price" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="84.0" prefHeight="16.0" prefWidth="82.0" text="total price" textFill="SILVER" />
+                        <Label layoutX="29.0" layoutY="182.0" prefHeight="16.0" prefWidth="82.0" text="total price" textFill="SILVER" />
+                        <Label layoutX="29.0" layoutY="289.0" prefHeight="16.0" prefWidth="82.0" text="total price" textFill="SILVER" />
+                        <Label layoutX="222.0" layoutY="54.0" prefHeight="30.0" prefWidth="237.0" text="Turnover rate" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="222.0" layoutY="152.0" prefHeight="30.0" prefWidth="237.0" text="Peak Usage" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="222.0" layoutY="84.0" prefHeight="16.0" prefWidth="82.0" text="percentage" textFill="SILVER" />
+                        <Label layoutX="222.0" layoutY="182.0" prefHeight="16.0" prefWidth="82.0" text="hours" textFill="SILVER" />
+                        <Label layoutX="29.0" layoutY="108.0" prefHeight="30.0" prefWidth="150.0" text="ksh 2380 " textFill="#c0c0c3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="weekly_income" layoutX="29.0" layoutY="209.0" prefHeight="30.0" prefWidth="150.0" text="ksh 2380 " textFill="#c0c0c3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="312.0" prefHeight="30.0" prefWidth="150.0" text="ksh 100/hr" textFill="#e0e0e0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="222.0" layoutY="201.0" prefHeight="30.0" prefWidth="150.0" text="1700 hrs" textFill="#f0f0f0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="turnover" layoutX="222.0" layoutY="108.0" prefHeight="30.0" prefWidth="150.0" text="+ 17 %" textFill="#e0e0e0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="222.0" layoutY="256.0" prefHeight="30.0" prefWidth="193.0" text="Profit" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="222.0" layoutY="289.0" prefHeight="16.0" prefWidth="82.0" text="percentage" textFill="SILVER" />
+                        <Label layoutX="222.0" layoutY="312.0" prefHeight="30.0" prefWidth="150.0" text="+ 12%" textFill="#e0e0e0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="402.0" prefWidth="930.0" style="-fx-background-radius: 30px; -fx-background-color: #444444;" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="5.0" top="20.0" />
+                     </GridPane.margin>
+                     <children>
+                        <Label layoutX="32.0" layoutY="10.0" prefHeight="33.0" prefWidth="229.0" text="Vehicle Statistics" textFill="SILVER">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <BarChart fx:id="bar_chart" barGap="5.0" layoutX="24.0" layoutY="43.0" legendSide="RIGHT" prefHeight="353.0" prefWidth="684.0" style="fil: red;" stylesheets="@css/homepage.css">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" startMargin="0.0" style="-fx-tick-label-fill: #e0e0e0;" fx:id="x_axis" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="y_axis" label="NO. of vehicles" prefHeight="312.0" prefWidth="49.0" side="LEFT" style="-fx-tick-label-fill: #C0C0C0;" tickLabelFill="SILVER">
+                                 <tickLabelFont>
+                                    <Font size="14.0" />
+                                 </tickLabelFont></NumberAxis>
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children></AnchorPane>
+        <AnchorPane prefHeight="0.0" prefWidth="0.0" style="-fx-background-color: #444444; -fx-background-radius: 30PX;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+         </GridPane.margin>
+         <children>
+            <AnchorPane layoutX="22.0" prefHeight="57.0" prefWidth="1469.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Label layoutX="20.0" layoutY="14.0" prefHeight="33.0" prefWidth="193.0" text="WHITELIST" textFill="SILVER">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="searchbar" layoutX="1069.0" layoutY="4.0" minHeight="35.0" onKeyPressed="#search_db" prefHeight="53.0" prefWidth="421.0" promptText="Search . . . " style="-fx-background-radius: 20px; -fx-background-color: #e0e0e0; -fx-font-family: kalam; -fx-border-color: transparent;" stylesheets="@css/table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="4.0">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="10.0" top="20.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </opaqueInsets>
+                  </TextField>
+                  <Button fx:id="booked_btn" layoutX="262.0" layoutY="14.0" mnemonicParsing="false" onAction="#booked_table" prefHeight="33.0" prefWidth="199.0" style="-fx-background-color: #dc143c;" text="Parked" textFill="WHITE" />
+                  <Button fx:id="reservation_btn" layoutX="546.0" layoutY="14.0" mnemonicParsing="false" onAction="#reservation_table" prefHeight="33.0" prefWidth="199.0" style="-fx-background-color: #2d2d2d;" text="Reservations" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="table" layoutX="181.0" layoutY="74.0" prefHeight="40.0" prefWidth="1516.0" style="-fx-background-radius: 30px; -fx-background-insets: 0,0010; -fx-background-color: #2b2b2b;" stylesheets="@css/table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
+              <columns>
+                  <TableColumn fx:id="date_column" prefWidth="500.0" text="DATE" />
+                  <TableColumn fx:id="plates_column" prefWidth="124.8" text="PLATE NUMBER" />
+                  <TableColumn fx:id="slotnumber_column" prefWidth="500.0" text="SLOT NUMBER" />
+                  <TableColumn fx:id="entrytime_column" prefWidth="130.0" text="ENTRY TIME" />
+                  <TableColumn fx:id="departuretime_column" prefWidth="75.0" text="DEPARTURE TIME" />
+                  <TableColumn fx:id="charge_column" prefWidth="75.0" text="PAYMENT ID" />
+                  <TableColumn fx:id="paymentid_column" prefWidth="75.0" text="AMOUNT" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TableView>
+         </children></AnchorPane>
+    </children>
+</GridPane>
