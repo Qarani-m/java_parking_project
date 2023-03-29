@@ -8,14 +8,12 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.home.Slots">
    <children>
       <AnchorPane prefHeight="1080.0" prefWidth="384.0" style="-fx-background-color: #444444;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button fx:id="dash_btn" layoutX="126.0" layoutY="226.0" mnemonicParsing="false" onAction="#goToDashboard" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="Dashboard" textFill="#fefefe" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="192.0" />
-            <Button fx:id="financial_btn" layoutX="125.0" layoutY="322.0" mnemonicParsing="false" onAction="#goToFinancials" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="Finacial report" textFill="#fefefe" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="262.0" />
-            <Button layoutX="126.0" layoutY="420.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Slots " textFill="#fefefe" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="335.0" />
+            <Button layoutX="78.0" layoutY="290.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Slots " textFill="#fefefe" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="290.0" />
             <Button fx:id="manual_clearance_btn" layoutX="126.0" layoutY="500.0" mnemonicParsing="false" onAction="#goToManualClearance" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="Manual clearance" textFill="#fefefe" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="405.0" />
             <Circle fill="#444444" layoutX="182.0" layoutY="915.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="164.0" />
             <Label layoutX="182.0" layoutY="907.0" text="EM" textFill="#f2ebeb" />

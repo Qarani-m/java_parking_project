@@ -140,7 +140,7 @@ public class Slots implements Initializable  {
                 C1R2S07,C1R2S08,C1R2S09,C1R2S10,C1R2S11,C1R2S12,C1R3S01,C1R3S02,C1R3S03,C1R3S04,C1R3S05,C1R3S06,C1R3S07,C1R3S08, C1R3S09,C1R3S10,C1R3S11,C1R3S12,
         };
         System.out.println("--------");
-        String[] colors = {"#dc143c","#2d2d2d"};
+        String[] colors = {"#2d2d2d","#2d2d2d"};
         ArrayList<String>[] vals = (ArrayList<String>[]) DbConfig.executeQuery("select * from slots");
         for (int k= 0; k < 2; k++) {
             ArrayList<String> innerList = vals[k];

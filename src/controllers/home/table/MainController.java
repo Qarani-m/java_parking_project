@@ -84,8 +84,6 @@ public class MainController extends Thread implements Initializable{
         new Barchart(bar_chart);
         Statistics st =new Statistics();
         st.start();
-
-
         timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             new Slots();
             reserved_space.setText(String.valueOf(st.reservation_count));

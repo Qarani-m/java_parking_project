@@ -41,7 +41,7 @@
             <Button fx:id="slots_btn1" layoutX="86.0" layoutY="335.0" mnemonicParsing="false" onAction="#goToSlots" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #2d2d2d; -fx-background-radius: 10px;" text="Slots Details" textFill="#ebf2ec" />
             <Button fx:id="slots_btn11" layoutX="93.0" layoutY="405.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #dc143c; -fx-background-radius: 10px;" text="Manual vehicle Clearance" textFill="#ebf2ec" />
          </children></AnchorPane>
-        <AnchorPane prefHeight="511.0" prefWidth="1536.0" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="2">
+        <AnchorPane prefHeight="511.0" prefWidth="1536.0" GridPane.columnIndex="1" GridPane.rowSpan="2">
          <children>
             <GridPane hgap="10.0" prefHeight="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columnConstraints>
@@ -52,52 +52,24 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Vehicle" textFill="#fffbfb" GridPane.columnIndex="1" />
                   <AnchorPane prefHeight="1279.0" prefWidth="911.0" style="-fx-background-color: #ffffff;">
                      <children>
-                        <AnchorPane layoutY="85.0" prefHeight="462.0" prefWidth="763.0" AnchorPane.topAnchor="85.0">
+                        <AnchorPane layoutX="199.0" layoutY="85.0" prefHeight="462.0" prefWidth="763.0" AnchorPane.topAnchor="85.0">
                            <children>
-                              <Label layoutX="41.0" layoutY="39.0" style="-fx-font-weight: bold;" text="Manual vehicle Book-in">
+                              <Label layoutX="194.0" layoutY="24.0" style="-fx-font-weight: bold;" text="Manual vehicle Release">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="286.0" layoutY="373.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="142.0" style="-fx-background-color: #dc143c;" text="Submit" textFill="#fefefe" />
-                              <TextField layoutX="230.0" layoutY="288.0" prefHeight="41.0" prefWidth="255.0" promptText="Slot" style="-fx-border-color: #2d2d2d;" />
-                              <TextField layoutX="230.0" layoutY="199.0" prefHeight="41.0" prefWidth="255.0" promptText="Time In" style="-fx-border-color: #2d2d2d;" />
-                              <TextField layoutX="230.0" layoutY="116.0" prefHeight="41.0" prefWidth="255.0" promptText="Number Plate" style="-fx-border-color: #2d2d2d;" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="6.0" layoutY="547.0" prefHeight="469.0" prefWidth="763.0">
-                           <children>
-                              <Label layoutX="41.0" layoutY="39.0" style="-fx-font-weight: bold;" text="Manual vehicle Release">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <TextField layoutX="229.0" layoutY="121.0" prefHeight="41.0" prefWidth="255.0" promptText="Number Plate" style="-fx-border-color: #2d2d2d;" />
-                              <TextField layoutX="229.0" layoutY="202.0" prefHeight="41.0" prefWidth="255.0" promptText="Time In" style="-fx-border-color: #2d2d2d;" />
-                              <Button layoutX="286.0" layoutY="377.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="142.0" style="-fx-background-color: #dc143c;" text="Submit" textFill="#fefefe" />
-                              <TextField layoutX="229.0" layoutY="292.0" prefHeight="41.0" prefWidth="255.0" promptText="Slot" style="-fx-border-color: #2d2d2d;" />
+                              <TextField fx:id="plate" layoutX="176.0" layoutY="68.0" prefHeight="41.0" prefWidth="255.0" promptText="Number Plate" style="-fx-border-color: #2d2d2d;" />
+                              <Button fx:id="deleteButton" layoutX="273.0" layoutY="169.0" mnemonicParsing="false" onAction="#delete" text="Clear" />
                            </children>
                         </AnchorPane>
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1">
                      <children>
-                        <AnchorPane layoutX="-3.0" layoutY="71.0" prefHeight="469.0" prefWidth="919.0" AnchorPane.topAnchor="71.0">
-                           <children>
-                              <Label layoutX="41.0" layoutY="39.0" style="-fx-font-weight: bold;" text="Manual vehicle Reservation">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <TextField layoutX="229.0" layoutY="121.0" prefHeight="41.0" prefWidth="255.0" promptText="Number Plate" style="-fx-border-color: #2d2d2d;" />
-                              <TextField layoutX="229.0" layoutY="202.0" prefHeight="41.0" prefWidth="255.0" promptText="Time In" style="-fx-border-color: #2d2d2d;" />
-                              <Button layoutX="285.0" layoutY="377.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="142.0" style="-fx-background-color: #dc143c;" text="Submit" textFill="#fefefe" />
-                              <TextField layoutX="229.0" layoutY="292.0" prefHeight="41.0" prefWidth="255.0" promptText="Slot" style="-fx-border-color: #2d2d2d;" />
-                           </children>
-                        </AnchorPane>
+                        <AnchorPane layoutX="-3.0" layoutY="71.0" prefHeight="469.0" prefWidth="919.0" AnchorPane.topAnchor="71.0" />
                      </children>
                   </AnchorPane>
                </children>

@@ -28,7 +28,7 @@ public class DbConfig {
                 if(query.contains("SELECT password FROM users")) {
                         return login(resultSet);
                 } else if(query.contains("select * from slots")) {
-                    System.out.println("--------");
+
                     return slotsHandler(resultSet);
                 } else if(query.contains("select count(id) from")) {
                     return reservation_count(resultSet);

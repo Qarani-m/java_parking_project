@@ -35,3 +35,5 @@
 
 
 
+        insert into places(lotId,lotName,city,street,src,position) values("2","name 2","Chuka","Schuka","pb=!1m18!1m12!1m3!1d3989.756106319232!2d37.65430965060593!3d-0.3199674354251008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1827b9cbd73ed95f%3A0xefb4ff5ee3ca6fd4!2sChuka%20University%20Gate%20F!5e0!3m2!1sen!2ske!4v1679776947082!5m2!1sen!2ske","https://www.google.com/maps/dir/Chuka+University+Gate+F,+Chuka/''/@-0.320181,37.6506304,17z/data=!3m1!4b1!4m17!1m7!3m6!1s0x1827b9cbd73ed95f:0xefb4ff5ee3ca6fd4!2sChuka+University+Gate+F!");
+
